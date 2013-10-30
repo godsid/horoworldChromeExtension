@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="js/angular.min.js"></script>
+<script src="js/horoworldCtrl.js"></script>
+</head>
+<body>
+<div class="warpper" >
+	<div class="header">
+<!--		<h1 class="logo"><a href="http://www.edtguide.com" title="Logo"><img src="images/logo.png"></a></h1>
+		<div class="btn-map"><a href="http://www.edtguide.com/nearme" title="ดูที่กิน ดื่ม เที่ยวใกล้คุณ">ดูที่กิน ดื่ม เที่ยว<br>ใกล้คุณ คลิกเลย!</a></div>
+	-->
+	</div>
+<section class="hotLotto" ng-controller="hotLottoCtrl">
+</section>
+<!-- checkLotto -->
+<section  ng-controller="checkLottoCtrl">
+	<h2>ตรวจสลากกินแบ่งรัฐบาล</h2>
+	<p>ประจำวันที่ {{lotto.currentDate}}</p>
+	<p><label>รางวัลที่ 1</label><span>{{lotto.first}}</span></p>
+	<p><label>เลขท้าย 3 ตัว</label><span>{{lotto.three}}</span></p>
+	<p><label>เลขท้าย 2 ตัว</label><span>{{lotto.two}}</span></p>
+	<h2>ตรวจผลสลาก</h2>
+	<p>
+		<input ng-model="lotto.search" placeholder="กรอกเลขสลาก" type="text" /> 
+		<select ng-model="lotto.dateSelect" ><option ng-repeat="date in lotto.dates" value="{{date.value}}">{{date.text}}</option></select>
+	</p>
+	<p><input ng-click="checkLotto()" type="button" value="ตรวจผลสลาก" /></p>
+</section>
+<!-- /checkLotto -->
+<!-- news -->
+<section class="news" ng-controller="newsCtrl">
+	<h1>เรื่องเด็ดติดกระแส</h1>
+	<ul class="notification">
+			<li class="lists reading" ng-repeat="item in news.items">
+                <a ng-click="gotoLink()" rel="{{item.url}}">
+                <div class="ContentInfo">
+                       <figure class="thb-action">
+                                <img src="{{item.thumb}}">
+                                <figcaption>{{item.title}}</figcaption>
+                        </figure>
+                        <p class="Action">
+                            <strong class="txt-red">{{item.title}}</strong>
+							<small>{{item.desc}}</small>
+                        </p>
+                        <div class="time-device">
+                            <abbr class="timestamp livetimestamp">ประมาณ 1 ชั่วโมงที่แล้ว</abbr> | <span class="more">อ่านต่อ</span>
+                        </div>
+                </div>
+               </a>
+            </li>
+	</ul>
+</section>
+<!-- /news -->
+<section class="horoscope" ng-controller="horoscopeCtrl">
+
+</section>
+
+
+
+	<div class="content">
+	<!-- Notification -->
+	<!--
+		<ul class="notification">
+			<li class="lists reading">
+                <a href="http://review.edtguide.com/404732_">
+                <div class="ContentInfo">
+                       <figure class="thb-action">
+                                <img src="http://ed.files-media.com/ud/review/1/136/405793/01.jpg">
+                                <figcaption>@AKA YAKINIKU</figcaption>
+                        </figure>
+                        <p class="Action">
+                            <strong class="txt-red">ภัตตาคารหลิวเซียงฟง</strong>
+							<small>ภัตตาคารหลิวเซียงฟง ความอร่อยครั้งแรกในเมืองไทยแบบนี้ไม่พิสูจน์ไม่ได้แล้ว!</small>
+                        </p>
+                        <div class="time-device">
+                            <abbr data-utime="1375414311" class="timestamp livetimestamp">ประมาณ 1 ชั่วโมงที่แล้ว</abbr> | <span class="more">อ่านต่อ</span>
+                        </div>
+                </div>
+               </a>
+            </li>
+			<li class="lists reading">
+                <a href="http://review.edtguide.com/404732_">
+                <div class="ContentInfo">
+                        <figure class="thb-action">
+                                <img src="http://ed.files-media.com/ud/review/1/136/405793/01.jpg">
+                                <figcaption>@AKA YAKINIKU</figcaption>
+                        </figure>
+                        <p class="Action">
+                            <strong class="txt-red">ภัตตาคารหลิวเซียงฟง</strong>
+							<small>ภัตตาคารหลิวเซียงฟง ความอร่อยครั้งแรกในเมืองไทยแบบนี้ไม่พิสูจน์ไม่ได้แล้ว!</small>
+                        </p>
+                        <div class="time-device">
+                            <abbr data-utime="1375414311" class="timestamp livetimestamp">ประมาณ 1 ชั่วโมงที่แล้ว</abbr> | <span class="more">อ่านต่อ</span>
+                        </div>
+                </div>
+               </a>
+            </li>
+		</ul>-->
+		<!-- /Notification -->
+		<ul class="follow-us">
+        	<li class="fb"><a href="https://www.facebook.com/EDTguide" title="facebook">facebook</a></li>
+            <li class="tw"><a href="https://www.twitter.com/EDTguide" title="twitter">twitter</a></li>
+            <li class="gg"><a href="https://plus.google.com/+edtguide" title="google+">google+</a></li>
+            <li class="yt"><a href="https://www.youtube.com/user/edtguide" title="youtube">youtube</a></li>
+        </ul>
+	</div>
+</div>
+
+<!--
+<script src="js/jquery.tools.min_1.7.2.js"></script>
+<script src="js/db.js"></script>
+<script src="js/common.js"></script>
+<script src="js/popup.js"></script>
+-->
+</body>
+</html>
+
+    
