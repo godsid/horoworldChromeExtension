@@ -4,8 +4,8 @@
 	"version": "1.0.0",
 	"description": "Horoworld Horoscope ครบเครื่องเรื่องหวยและดวง",
 	"background": {
-					"scripts":["js/angular.min.js,js/jquery.tools.min_1.7.2.js","js/db.js","js/common.js","js/background.js"]
-				},
+			"scripts":["js/jquery-1.9.1.min.js","js/db.js","js/common.js","js/background.js"]
+			},
 	"browser_action": {
 		"default_title": "Horoworld.com",
 		"default_popup": "popup.html",
@@ -51,6 +51,6 @@
 	"web_accessible_resources" : [
 		"*"
 	],
-	"content_security_policy":"script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+	"content_security_policy":"script-src 'unsafe-eval' 'self' https://ssl.google-analytics.com; object-src 'self'"
 	
 }
