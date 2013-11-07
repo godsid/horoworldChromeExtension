@@ -120,15 +120,11 @@ $('.follow-us li a').click(function(){
 
 
 
-/*
-// Check Login
-chrome.cookies.get({url :wwwurl,name:'WCC_user'},function(cookie){
-	if(cookie==null){
-		isLogin = false;
-		randerLogin();
-	}else{
-		isLogin = true;
-		getNotification();
-	}
-});
-*/
+var lotto = {};
+
+lotto.showLotto = function(){
+	
+}
+
+
+setTimeout(lotto.showLotto,delayTime())

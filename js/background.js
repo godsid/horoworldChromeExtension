@@ -1,4 +1,6 @@
 var notificationUrl = 'https://secure.soi19.com/notification/register.php';
+var oldChromeVersion = !chrome.runtime;
+var requestTimerId;
 
 chrome.runtime.onInstalled.addListener(function(obj){
 	Debug("Installed");
@@ -110,6 +112,14 @@ chrome.notifications.onClosed.addListener(function(id){
 			createNotificationByType(notifications[0]);
 		}
 });
+
+
+
+
+
+
+
+
 
 //pushReceive({subchannelId :1,payload:"http://srihawong.info/app/chrome/getdata.php"});
 //pushReceive({subchannelId :0,payload:"|http://ed.files-media.com/di/logo.png|Review:AKA YAKINIKU|การหาช่วงเวลาพิเศษ ในมุมพิเศษ เพื่อเติมช่วงเวลาแห่งความสุข และความผูกพันกับคนในครอบครัวนั้น ถือเป็นโจทย์อย่างหนึ่งที่ต้องพิถีพิถันเลือกกัน...|http://review.edtguide.com/405793_|"})

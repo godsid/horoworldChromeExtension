@@ -128,3 +128,15 @@ function createNotificationByType(data){
 	});
 }
 
+
+function delayTime(fail,intervalMin,intervalMax) {
+  intervalMin = intervalMin || 60;
+  intervalMax = intervalMax || 3600;
+  var randomness = Math.random() * 2;
+  var exponent = Math.pow(2, fail || 0);
+  var multiplier = Math.max(randomness * exponent, 1);
+  var delay = Math.min(multiplier * intervalMin, intervalMax);
+  delay = Math.round(delay);
+  console.log('Scheduling for: ' + delay);
+  return delay;
+}

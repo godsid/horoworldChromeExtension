@@ -13,26 +13,52 @@
 		<div class="btn-map"><a href="http://www.edtguide.com/nearme" title="ดูที่กิน ดื่ม เที่ยวใกล้คุณ">ดูที่กิน ดื่ม เที่ยว<br>ใกล้คุณ คลิกเลย!</a></div>
 	-->
 	</div>
-<section class="hotLotto" ng-controller="hotLottoCtrl">
+<section class="hotLotto" ng-controller="hotLottoCtrl" style="display:none">
 </section>
 <!-- checkLotto -->
 <section  ng-controller="checkLottoCtrl">
-	<h2>ตรวจสลากกินแบ่งรัฐบาล</h2>
-	<p>ประจำวันที่ {{lotto.currentDate}}</p>
-	<p><label>รางวัลที่ 1</label><span>{{lotto.first}}</span></p>
-	<p><label>เลขท้าย 3 ตัว</label><span>{{lotto.three}}</span></p>
-	<p><label>เลขท้าย 2 ตัว</label><span>{{lotto.two}}</span></p>
-	<h2>ตรวจผลสลาก</h2>
-	<p>
-		<input ng-model="lotto.search" placeholder="กรอกเลขสลาก" type="text" /> 
-		<select ng-model="lotto.dateSelect" ><option ng-repeat="date in lotto.dates" value="{{date.value}}">{{date.text}}</option></select>
-	</p>
-	<p><input ng-click="checkLotto()" type="button" value="ตรวจผลสลาก" /></p>
+	<div>
+		
+	</div>
+	<div>
+		<h2>ตรวจสลากกินแบ่งรัฐบาล</h2>
+		<p>ประจำวันที่ {{lotto.currentDate}}</p>
+		<p><label>รางวัลที่ 1</label><span>{{lotto.first}}</span></p>
+		<p><label>เลขท้าย 3 ตัว</label><span>{{lotto.three}}</span></p>
+		<p><label>เลขท้าย 2 ตัว</label><span>{{lotto.two}}</span></p>
+		<h2>ตรวจผลสลาก</h2>
+		<p>
+			<input ng-model="lotto.search" placeholder="กรอกเลขสลาก" type="text" /> 
+			<select ng-model="lotto.dateSelect" ><option ng-repeat="date in lotto.dates" value="{{date.value}}">{{date.text}}</option></select>
+		</p>
+		<p><input ng-click="checkLotto()" type="button" value="ตรวจผลสลาก" /></p>
+	</div>
 </section>
 <!-- /checkLotto -->
+<!-- Horoworld Daily -->
+<section class="horodaily" style="display:none">
+	<h2>ดวงวันนี้ของคนเกิด วันเสาร์  </h2>
+	<p>ประจำวันที่ 10 พฤศจิกายน 2556</p>
+	<p>
+		วันนี้หากมีงานเลี้ยงสังสรรค์หรือเดินทางยามค่ำคืนไม่ราบรื่นนักควรระมัดระวังตัวเป็นพิเศษ<br/><br/>
+		<strong>การงาน</strong> หลายท่านอาจจะได้รับบาดเจ็บจากการทำงาน ท่านที่ต้องทำงานเสี่ยงภัยและใช้เครื่องจักรหรือของมีคมในวันนี้จึงไม่ควรประมาท<br/>
+		<strong>การเงิน</strong> วันนี้เรื่องผลประโยชน์ที่มีแนวโน้มว่าจะได้ กลับมีการต่อรองเพื่อขยายเวลาออกไปอีก ท่านต้องทำความเข้าใจในเรื่องการเงินใหม่ เพื่อไม่ให้เกิดความผิดพลาดขึ้นอีก<br/>
+		<strong>ความรัก</strong> เรื่องความรักของท่านวันนี้ไม่ราบรื่นเท่าที่ควร คู่รักจะทำให้ท่านเกิดความกังวลใจ แต่ท่านก็ไม่ควรคิดไปไกลจนเกินเหตุ เพราะบางทีอาจเป็นเพียงเรื่องเล็กน้อย หากถือสาหาความก็จะทำให้เกิดความขัดแย้ง<br/>
+	</p>
+</section>
+<!-- /Horoworld Daily -->
+<!-- /Horoworld Weekly -->
+<section class="horoweekly" style="display:none">
+	<h2>ดวงรายปักษ์ของคนเกิด ราศีกุมภ์</h2>
+	<p>ระหว่างวันที่ 1 พ.ย. 56 ถึง 15 พ.ย. 56</p>
+	<p>ข้อมูล</p>
+</section>
+<!-- /Horoworld Weekly -->
+
+
 <!-- news -->
-<section class="news" ng-controller="newsCtrl">
-	<h1>เรื่องเด็ดติดกระแส</h1>
+<section class="news" ng-controller="newsCtrl" style="display:none">
+	<h2>เรื่องเด็ดติดกระแส</h2>
 	<ul class="notification">
 			<li class="lists reading" ng-repeat="item in news.items">
                 <a ng-click="gotoLink()" rel="{{item.url}}">
@@ -54,9 +80,9 @@
 	</ul>
 </section>
 <!-- /news -->
-<section class="horoscope" ng-controller="horoscopeCtrl">
+<section class="horoscope" ng-controller="horoscopeCtrl" style="display:none">
 </section>
-	<div class="content">
+	<div class="content" style="display:none">
 	<!-- Notification -->
 	<!--
 		<ul class="notification">

@@ -3,6 +3,7 @@
 	"name": "Horoworld Horoscope",
 	"version": "1.0.0",
 	"description": "Horoworld Horoscope ครบเครื่องเรื่องหวยและดวง",
+	"options_page": "options.html",
 	"background": {
 			"scripts":["js/jquery-1.9.1.min.js","js/db.js","js/common.js","js/background.js"]
 			},
